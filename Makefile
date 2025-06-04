@@ -1,3 +1,8 @@
+MODULES ?= custom_driver
+TDIR = $(PWD)
+
+ccflags-y += -I/$(TDIR)/inc/
+
 obj-m := custom_driver.o
 
 custom_driver-y += \
