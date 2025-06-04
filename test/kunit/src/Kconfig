@@ -1,0 +1,7 @@
+config CUSTOM_DRIVER_TEST
+        tristate "Test for custom driver test" if !KUNIT_ALL_TESTS
+        depends on CUSTOM_DRIVER && KUNIT
+        default KUNIT_ALL_TESTS
+
+config CUSTOM_DRIVER
+        bool "custom_driver"
